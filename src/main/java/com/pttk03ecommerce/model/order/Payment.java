@@ -1,15 +1,17 @@
 package com.pttk03ecommerce.model.order;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Payment {
-    private int ID;
-    private Date date;
-    private float totalPrice;
-    private String status, notes;
-    private int orderID;
+    private Integer ID;
+    private LocalDateTime date;
+    private Float totalPrice;
+    private String status;
+    private String notes;
+    private Integer orderID;
 
-    public Payment(int ID, Date date, float totalPrice, String status, String notes, int orderID) {
+    public Payment(Integer ID, LocalDateTime date, Float totalPrice, String status, String notes, Integer orderID) {
         this.ID = ID;
         this.date = date;
         this.totalPrice = totalPrice;
@@ -18,27 +20,27 @@ public class Payment {
         this.orderID = orderID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public Date getDate() {
+    public LocalDateTime getLocalDateTime() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setLocalDateTime(LocalDateTime date) {
         this.date = date;
     }
 
-    public float getTotalPrice() {
+    public Float getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(float totalPrice) {
+    public void setTotalPrice(Float totalPrice) {
         this.totalPrice = totalPrice;
     }
 
@@ -58,11 +60,11 @@ public class Payment {
         this.notes = notes;
     }
 
-    public int getOrderID() {
+    public Integer getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(int orderID) {
+    public void setOrderID(Integer orderID) {
         this.orderID = orderID;
     }
 }

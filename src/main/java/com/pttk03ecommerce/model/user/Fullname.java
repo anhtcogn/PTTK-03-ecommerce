@@ -1,22 +1,23 @@
 package com.pttk03ecommerce.model.user;
 
 public class Fullname {
-    private int ID;
-    private String firstName, lastName;
-    private int userID;
+    private Integer ID;
+    private String firstName;
+    private String lastName;
+    private Integer userID;
 
-    public Fullname(int ID, String firstName, String lastName, int userID) {
+    public Fullname(Integer ID, String firstName, String lastName, Integer userID) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userID = userID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -36,11 +37,11 @@ public class Fullname {
         this.lastName = lastName;
     }
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 }

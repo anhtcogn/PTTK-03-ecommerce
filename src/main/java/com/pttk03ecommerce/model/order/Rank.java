@@ -1,11 +1,13 @@
 package com.pttk03ecommerce.model.order;
 
 public class Rank {
-    private int ID, rank;
+    private Integer ID;
+    private Integer rank;
     private String contents;
-    private int orderID, userID;
+    private Integer orderID;
+    private Integer userID;
 
-    public Rank(int ID, int rank, String contents, int orderID, int userID) {
+    public Rank(Integer ID, Integer rank, String contents, Integer orderID, Integer userID) {
         this.ID = ID;
         this.rank = rank;
         this.contents = contents;
@@ -13,19 +15,19 @@ public class Rank {
         this.userID = userID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public int getRank() {
+    public Integer getRank() {
         return rank;
     }
 
-    public void setRank(int rank) {
+    public void setRank(Integer rank) {
         this.rank = rank;
     }
 
@@ -37,19 +39,19 @@ public class Rank {
         this.contents = contents;
     }
 
-    public int getOrderID() {
+    public Integer getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(int orderID) {
+    public void setOrderID(Integer orderID) {
         this.orderID = orderID;
     }
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 }

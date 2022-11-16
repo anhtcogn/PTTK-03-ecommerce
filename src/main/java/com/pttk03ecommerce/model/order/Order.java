@@ -3,13 +3,13 @@ package com.pttk03ecommerce.model.order;
 import java.util.Date;
 
 public class Order {
-    private int ID;
+    private Integer ID;
     private Date date;
-    private float price;
+    private Float price;
     private String status;
-    private int cartID;
+    private Integer cartID;
 
-    public Order(int ID, Date date, float price, String status, int cartID) {
+    public Order(Integer ID, Date date, Float price, String status, Integer cartID) {
         this.ID = ID;
         this.date = date;
         this.price = price;
@@ -17,11 +17,11 @@ public class Order {
         this.cartID = cartID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -33,11 +33,11 @@ public class Order {
         this.date = date;
     }
 
-    public float getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
@@ -49,11 +49,11 @@ public class Order {
         this.status = status;
     }
 
-    public int getCartID() {
+    public Integer getCartID() {
         return cartID;
     }
 
-    public void setCartID(int cartID) {
+    public void setCartID(Integer cartID) {
         this.cartID = cartID;
     }
 }

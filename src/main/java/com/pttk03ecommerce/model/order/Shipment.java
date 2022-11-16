@@ -1,22 +1,23 @@
 package com.pttk03ecommerce.model.order;
 
 public class Shipment {
-    private int ID;
-    private String status, notes;
-    private int orderID;
+    private Integer ID;
+    private String status;
+    private String notes;
+    private Integer orderID;
 
-    public Shipment(int ID, String status, String notes, int orderID) {
+    public Shipment(Integer ID, String status, String notes, Integer orderID) {
         this.ID = ID;
         this.status = status;
         this.notes = notes;
         this.orderID = orderID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -36,11 +37,11 @@ public class Shipment {
         this.notes = notes;
     }
 
-    public int getOrderID() {
+    public Integer getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(int orderID) {
+    public void setOrderID(Integer orderID) {
         this.orderID = orderID;
     }
 }

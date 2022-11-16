@@ -1,13 +1,17 @@
 package com.pttk03ecommerce.model.user;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class User {
-    private int ID;
-    private Date dateOfBirth;
-    private String phone, email, gender, position;
+    private Integer ID;
+    private LocalDateTime dateOfBirth;
+    private String phone;
+    private String email;
+    private String gender;
+    private String position;
 
-    public User(int ID, Date dateOfBirth, String phone, String email, String gender, String position) {
+    public User(Integer ID, LocalDateTime dateOfBirth, String phone, String email, String gender, String position) {
         this.ID = ID;
         this.dateOfBirth = dateOfBirth;
         this.phone = phone;
@@ -16,19 +20,19 @@ public class User {
         this.position = position;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public Date getDateofBirth() {
+    public LocalDateTime getLocalDateTimeofBirth() {
         return dateOfBirth;
     }
 
-    public void dateOfBirth(Date dateOfBirth) {
+    public void dateOfBirth(LocalDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

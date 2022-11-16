@@ -1,11 +1,13 @@
 package com.pttk03ecommerce.model.user;
 
 public class Acount {
-    private int ID;
-    private String username, password, status;
-    private int userID;
+    private Integer ID;
+    private String username;
+    private String password;
+    private String status;
+    private Integer userID;
 
-    public Acount(int ID, String username, String password, String status, int userID) {
+    public Acount(Integer ID, String username, String password, String status, Integer userID) {
         this.ID = ID;
         this.username = username;
         this.password = password;
@@ -13,11 +15,11 @@ public class Acount {
         this.userID = userID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -45,11 +47,11 @@ public class Acount {
         this.status = status;
     }
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 }

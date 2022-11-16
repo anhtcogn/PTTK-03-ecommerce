@@ -2,7 +2,10 @@ package com.pttk03ecommerce.model.item;
 
 public class Publisher {
     private int ID;
-    private String name, address, email, status;
+    private String name;
+    private String address;
+    private String email;
+    private String status;
     private int bookID;
 
     public Publisher(int ID, String name, String address, String email, String status, int bookID) {

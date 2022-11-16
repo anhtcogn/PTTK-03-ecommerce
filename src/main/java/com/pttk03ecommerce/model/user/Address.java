@@ -1,11 +1,14 @@
 package com.pttk03ecommerce.model.user;
 
 public class Address {
-    private int ID, number;
-    private String streetName, districtName, provinceName;
-    private int userID;
+    private Integer ID;
+    private Integer number;
+    private String streetName;
+    private String districtName;
+    private String provinceName;
+    private Integer userID;
 
-    public Address(int ID, int number, String streetName, String districtName, String provinceName, int userID) {
+    public Address(Integer ID, Integer number, String streetName, String districtName, String provinceName, Integer userID) {
         this.ID = ID;
         this.number = number;
         this.streetName = streetName;
@@ -14,19 +17,19 @@ public class Address {
         this.userID = userID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
-    public int getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
@@ -54,11 +57,11 @@ public class Address {
         this.provinceName = provinceName;
     }
 
-    public int getUserID() {
+    public Integer getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(Integer userID) {
         this.userID = userID;
     }
 }

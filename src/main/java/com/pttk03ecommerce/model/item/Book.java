@@ -1,14 +1,14 @@
 package com.pttk03ecommerce.model.item;
 
 public class Book {
-    private int ID;
+    private Integer ID;
     private String name, describe;
-    private float price;
-    private float sale;
+    private Float price;
+    private Float sale;
     private String status;
-    private int cartID;
+    private Integer cartID;
 
-    public Book(int ID, String name, String describe, float price, float sale, String status, int cartID) {
+    public Book(Integer ID, String name, String describe, Float price, Float sale, String status, Integer cartID) {
         this.ID = ID;
         this.name = name;
         this.describe = describe;
@@ -18,19 +18,19 @@ public class Book {
         this.cartID = cartID;
     }
 
-    public int getCartID() {
+    public Integer getCartID() {
         return cartID;
     }
 
-    public void setCartID(int cartID) {
+    public void setCartID(Integer cartID) {
         this.cartID = cartID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -50,19 +50,19 @@ public class Book {
         this.describe = describe;
     }
 
-    public float getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
-    public float getSale() {
+    public Float getSale() {
         return sale;
     }
 
-    public void setSale(float sale) {
+    public void setSale(Float sale) {
         this.sale = sale;
     }
 

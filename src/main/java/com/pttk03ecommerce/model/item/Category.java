@@ -1,21 +1,21 @@
 package com.pttk03ecommerce.model.item;
 
 public class Category {
-    private int ID;
+    private Integer ID;
     private  String category;
-    private  int bookID;
+    private  Integer bookID;
 
-    public Category(int ID, String category, int bookID) {
+    public Category(Integer ID, String category, Integer bookID) {
         this.ID = ID;
         this.category = category;
         this.bookID = bookID;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -27,11 +27,11 @@ public class Category {
         this.category = category;
     }
 
-    public int getBookID() {
+    public Integer getBookID() {
         return bookID;
     }
 
-    public void setBookID(int bookID) {
+    public void setBookID(Integer bookID) {
         this.bookID = bookID;
     }
 }
