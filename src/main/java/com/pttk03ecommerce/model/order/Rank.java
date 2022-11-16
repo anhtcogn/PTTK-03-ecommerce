@@ -1,14 +1,14 @@
 package com.pttk03ecommerce.model.order;
 
-public class feedback {
+public class Rank {
     private int ID, rank;
-    private String content;
+    private String contents;
     private int orderID, userID;
 
-    public feedback(int ID, int rank, String content, int orderID, int userID) {
+    public Rank(int ID, int rank, String contents, int orderID, int userID) {
         this.ID = ID;
         this.rank = rank;
-        this.content = content;
+        this.contents = contents;
         this.orderID = orderID;
         this.userID = userID;
     }
@@ -29,12 +29,12 @@ public class feedback {
         this.rank = rank;
     }
 
-    public String getContent() {
-        return content;
+    public String getContents() {
+        return contents;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setContents(String contents) {
+        this.contents = contents;
     }
 
     public int getOrderID() {

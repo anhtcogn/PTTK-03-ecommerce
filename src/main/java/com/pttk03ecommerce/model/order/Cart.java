@@ -1,11 +1,21 @@
 package com.pttk03ecommerce.model.order;
 
-public class cart {
+public class Cart {
     private int ID, amount;
+    private int bookID;
 
-    public cart(int ID, int amount) {
+    public Cart(int ID, int amount, int bookID) {
         this.ID = ID;
         this.amount = amount;
+        this.bookID = bookID;
+    }
+
+    public int getBookID() {
+        return bookID;
+    }
+
+    public void setBookID(int bookID) {
+        this.bookID = bookID;
     }
 
     public int getID() {

@@ -2,14 +2,14 @@ package com.pttk03ecommerce.model.order;
 
 import java.util.Date;
 
-public class order {
+public class Order {
     private int ID;
     private Date date;
     private float price;
     private String status;
     private int cartID;
 
-    public order(int ID, Date date, float price, String status, int cartID) {
+    public Order(int ID, Date date, float price, String status, int cartID) {
         this.ID = ID;
         this.date = date;
         this.price = price;
