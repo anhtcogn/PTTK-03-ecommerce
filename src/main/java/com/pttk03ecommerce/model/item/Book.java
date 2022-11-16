@@ -1,12 +1,26 @@
 package com.pttk03ecommerce.model.item;
 
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
+@NoArgsConstructor
 public class Book {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer ID;
-    private String name, describe;
+    private String name;
+    private String describe;
     private Float price;
     private Float sale;
     private String status;
     private Integer cartID;
+
+    private Integer authorId;
+    private Integer publisherId;
+    private Integer categoryId;
 
     public Book(Integer ID, String name, String describe, Float price, Float sale, String status, Integer cartID) {
         this.ID = ID;
