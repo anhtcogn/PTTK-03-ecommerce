@@ -6,15 +6,13 @@ public class Publisher {
     private String address;
     private String email;
     private String status;
-    private int bookID;
 
-    public Publisher(int ID, String name, String address, String email, String status, int bookID) {
+    public Publisher(int ID, String name, String address, String email, String status) {
         this.ID = ID;
         this.name = name;
         this.address = address;
         this.email = email;
         this.status = status;
-        this.bookID = bookID;
     }
 
     public int getID() {
@@ -56,12 +54,5 @@ public class Publisher {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public int getBookID() {
-        return bookID;
-    }
-
-    public void setBookID(int bookID) {
-        this.bookID = bookID;
-    }
+    
 }

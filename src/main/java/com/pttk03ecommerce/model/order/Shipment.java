@@ -4,13 +4,13 @@ public class Shipment {
     private Integer ID;
     private String status;
     private String notes;
-    private Integer orderID;
+    private Order order;
 
-    public Shipment(Integer ID, String status, String notes, Integer orderID) {
+    public Shipment(Integer ID, String status, String notes, Order order) {
         this.ID = ID;
         this.status = status;
         this.notes = notes;
-        this.orderID = orderID;
+        this.order = order;
     }
 
     public Integer getID() {
@@ -37,11 +37,11 @@ public class Shipment {
         this.notes = notes;
     }
 
-    public Integer getOrderID() {
-        return orderID;
+    public Order getOrderID() {
+        return order;
     }
 
     public void setOrderID(Integer orderID) {
-        this.orderID = orderID;
+        this.order = order;
     }
 }

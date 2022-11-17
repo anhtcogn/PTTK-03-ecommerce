@@ -7,14 +7,14 @@ public class Order {
     private Date date;
     private Float price;
     private String status;
-    private Integer cartID;
+    private Cart cart;
 
-    public Order(Integer ID, Date date, Float price, String status, Integer cartID) {
+    public Order(Integer ID, Date date, Float price, String status, Cart cart) {
         this.ID = ID;
         this.date = date;
         this.price = price;
         this.status = status;
-        this.cartID = cartID;
+        this.cart = cart;
     }
 
     public Integer getID() {
@@ -49,11 +49,11 @@ public class Order {
         this.status = status;
     }
 
-    public Integer getCartID() {
-        return cartID;
+    public Cart getCart() {
+        return cart;
     }
 
-    public void setCartID(Integer cartID) {
-        this.cartID = cartID;
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }

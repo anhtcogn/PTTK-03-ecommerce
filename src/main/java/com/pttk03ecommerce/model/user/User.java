@@ -10,14 +10,20 @@ public class User {
     private String email;
     private String gender;
     private String position;
+    private Acount acount;
+    private Address address;
+    private Fullname fullname;
 
-    public User(Integer ID, LocalDateTime dateOfBirth, String phone, String email, String gender, String position) {
+    public User(Integer ID, LocalDateTime dateOfBirth, String phone, String email, String gender, String position, Acount acount, Address address, Fullname fullname) {
         this.ID = ID;
         this.dateOfBirth = dateOfBirth;
         this.phone = phone;
         this.email = email;
         this.gender = gender;
         this.position = position;
+        this.acount = acount;
+        this.address = address;
+        this.fullname = fullname;
     }
 
     public Integer getID() {
@@ -28,11 +34,11 @@ public class User {
         this.ID = ID;
     }
 
-    public LocalDateTime getLocalDateTimeofBirth() {
+    public LocalDateTime getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void dateOfBirth(LocalDateTime dateOfBirth) {
+    public void setDateOfBirth(LocalDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
@@ -66,5 +72,29 @@ public class User {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public Acount getAcount() {
+        return acount;
+    }
+
+    public void setAcount(Acount acount) {
+        this.acount = acount;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Fullname getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(Fullname fullname) {
+        this.fullname = fullname;
     }
 }

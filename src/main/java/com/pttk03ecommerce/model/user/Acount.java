@@ -5,14 +5,12 @@ public class Acount {
     private String username;
     private String password;
     private String status;
-    private Integer userID;
 
-    public Acount(Integer ID, String username, String password, String status, Integer userID) {
+    public Acount(Integer ID, String username, String password, String status) {
         this.ID = ID;
         this.username = username;
         this.password = password;
         this.status = status;
-        this.userID = userID;
     }
 
     public Integer getID() {
@@ -47,11 +45,4 @@ public class Acount {
         this.status = status;
     }
 
-    public Integer getUserID() {
-        return userID;
-    }
-
-    public void setUserID(Integer userID) {
-        this.userID = userID;
-    }
 }

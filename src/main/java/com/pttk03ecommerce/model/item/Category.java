@@ -2,13 +2,11 @@ package com.pttk03ecommerce.model.item;
 
 public class Category {
     private Integer ID;
-    private  String category;
-    private  Integer bookID;
+    private String category;
 
-    public Category(Integer ID, String category, Integer bookID) {
+    public Category(Integer ID, String category) {
         this.ID = ID;
         this.category = category;
-        this.bookID = bookID;
     }
 
     public Integer getID() {
@@ -27,11 +25,4 @@ public class Category {
         this.category = category;
     }
 
-    public Integer getBookID() {
-        return bookID;
-    }
-
-    public void setBookID(Integer bookID) {
-        this.bookID = bookID;
-    }
 }

@@ -1,5 +1,6 @@
 package com.pttk03ecommerce.model.item;
 
+import com.pttk03ecommerce.model.order.Cart;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -9,35 +10,30 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Book {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
     private String name;
     private String describe;
     private Float price;
     private Float sale;
     private String status;
-    private Integer cartID;
+    private Cart cart;
 
-    private Integer authorId;
-    private Integer publisherId;
-    private Integer categoryId;
+    private Author author;
+    private Publisher publisher;
+    private Category category;
 
-    public Book(Integer ID, String name, String describe, Float price, Float sale, String status, Integer cartID) {
+    public Book(Integer ID, String name, String describe, Float price, Float sale, String status, Cart cart, Author author, Publisher publisher, Category category) {
         this.ID = ID;
         this.name = name;
         this.describe = describe;
         this.price = price;
         this.sale = sale;
         this.status = status;
-        this.cartID = cartID;
-    }
-
-    public Integer getCartID() {
-        return cartID;
-    }
-
-    public void setCartID(Integer cartID) {
-        this.cartID = cartID;
+        this.cart = cart;
+        this.author = author;
+        this.publisher = publisher;
+        this.category = category;
     }
 
     public Integer getID() {
@@ -87,4 +83,37 @@ public class Book {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 }
+

@@ -9,15 +9,15 @@ public class Payment {
     private Float totalPrice;
     private String status;
     private String notes;
-    private Integer orderID;
+    private Order order;
 
-    public Payment(Integer ID, LocalDateTime date, Float totalPrice, String status, String notes, Integer orderID) {
+    public Payment(Integer ID, LocalDateTime date, Float totalPrice, String status, String notes, Order order) {
         this.ID = ID;
         this.date = date;
         this.totalPrice = totalPrice;
         this.status = status;
         this.notes = notes;
-        this.orderID = orderID;
+        this.order = order;
     }
 
     public Integer getID() {
@@ -28,11 +28,11 @@ public class Payment {
         this.ID = ID;
     }
 
-    public LocalDateTime getLocalDateTime() {
+    public LocalDateTime getDate() {
         return date;
     }
 
-    public void setLocalDateTime(LocalDateTime date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
@@ -60,11 +60,11 @@ public class Payment {
         this.notes = notes;
     }
 
-    public Integer getOrderID() {
-        return orderID;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderID(Integer orderID) {
-        this.orderID = orderID;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 }

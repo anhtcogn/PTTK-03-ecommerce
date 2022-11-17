@@ -4,13 +4,11 @@ public class Author {
     private Integer ID;
     private String name;
     private String describe;
-    private Integer bookID;
 
-    public Author(Integer ID, String name, String describe, Integer bookID) {
+    public Author(Integer ID, String name, String describe) {
         this.ID = ID;
         this.name = name;
         this.describe = describe;
-        this.bookID = bookID;
     }
 
     public Integer getID() {
@@ -35,13 +33,5 @@ public class Author {
 
     public void setDescribe(String describe) {
         this.describe = describe;
-    }
-
-    public Integer getBookID() {
-        return bookID;
-    }
-
-    public void setBookID(Integer bookID) {
-        this.bookID = bookID;
     }
 }

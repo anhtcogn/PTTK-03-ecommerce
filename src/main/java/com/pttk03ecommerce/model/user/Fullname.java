@@ -4,13 +4,11 @@ public class Fullname {
     private Integer ID;
     private String firstName;
     private String lastName;
-    private Integer userID;
 
-    public Fullname(Integer ID, String firstName, String lastName, Integer userID) {
+    public Fullname(Integer ID, String firstName, String lastName) {
         this.ID = ID;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.userID = userID;
     }
 
     public Integer getID() {
@@ -35,13 +33,5 @@ public class Fullname {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public Integer getUserID() {
-        return userID;
-    }
-
-    public void setUserID(Integer userID) {
-        this.userID = userID;
     }
 }

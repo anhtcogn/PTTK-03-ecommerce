@@ -1,22 +1,16 @@
 package com.pttk03ecommerce.model.order;
 
+import com.pttk03ecommerce.model.item.Book;
+
 public class Cart {
     private Integer ID;
     private Integer amount;
-    private Integer bookID;
+    private Book book;
 
-    public Cart(Integer ID, Integer amount, Integer bookID) {
+    public Cart(Integer ID, Integer amount, Book book) {
         this.ID = ID;
         this.amount = amount;
-        this.bookID = bookID;
-    }
-
-    public Integer getBookID() {
-        return bookID;
-    }
-
-    public void setBookID(Integer bookID) {
-        this.bookID = bookID;
+        this.book = book;
     }
 
     public Integer getID() {
@@ -33,5 +27,13 @@ public class Cart {
 
     public void setAmount(Integer amount) {
         this.amount = amount;
+    }
+
+    public Book getBook() {
+        return book;
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
     }
 }

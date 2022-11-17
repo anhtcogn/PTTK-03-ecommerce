@@ -6,15 +6,13 @@ public class Address {
     private String streetName;
     private String districtName;
     private String provinceName;
-    private Integer userID;
 
-    public Address(Integer ID, Integer number, String streetName, String districtName, String provinceName, Integer userID) {
+    public Address(Integer ID, Integer number, String streetName, String districtName, String provinceName) {
         this.ID = ID;
         this.number = number;
         this.streetName = streetName;
         this.districtName = districtName;
         this.provinceName = provinceName;
-        this.userID = userID;
     }
 
     public Integer getID() {
@@ -57,11 +55,4 @@ public class Address {
         this.provinceName = provinceName;
     }
 
-    public Integer getUserID() {
-        return userID;
-    }
-
-    public void setUserID(Integer userID) {
-        this.userID = userID;
-    }
 }
