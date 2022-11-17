@@ -1,37 +1,18 @@
 package com.pttk03ecommerce.model.user;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
+@Entity
+@Data
+@Table(name = "fullname")
+@NoArgsConstructor
 public class Fullname {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
     private String firstName;
     private String lastName;
-
-    public Fullname(Integer ID, String firstName, String lastName) {
-        this.ID = ID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public Integer getID() {
-        return ID;
-    }
-
-    public void setID(Integer ID) {
-        this.ID = ID;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }

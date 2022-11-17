@@ -6,9 +6,5 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
-    public User addUser();
-
-    public User updateUser();
-
-    public User deleteUser();
+    User getUserById(Integer id);
 }

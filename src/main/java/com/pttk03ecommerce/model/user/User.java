@@ -22,10 +22,9 @@ public class User {
     private String gender;
     private String position;
     @Column(name = "acount_id")
-    private int acountID;
+    private Integer acountID;
     @Column(name = "address_id")
-    private int addressID;
+    private Integer addressID;
     @Column(name = "fullname_id")
-    private int fullnameID;
-
+    private Integer fullnameID;
 }
