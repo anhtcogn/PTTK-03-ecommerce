@@ -32,6 +32,4 @@ public class Book {
 
     @Column(name = "category_id")
     private Integer categoryId;
-
 }
-
