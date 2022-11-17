@@ -1,4 +1,4 @@
-package com.pttk03ecommerce.service.impl;
+package com.pttk03ecommerce.service.impl.item;
 
 import com.pttk03ecommerce.model.item.Category;
 import com.pttk03ecommerce.repository.CategoryRepository;
