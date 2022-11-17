@@ -1,7 +1,13 @@
 package com.pttk03ecommerce.service.impl;
 
+import com.pttk03ecommerce.model.item.Author;
 import com.pttk03ecommerce.model.item.Book;
+import com.pttk03ecommerce.model.item.Category;
+import com.pttk03ecommerce.model.item.Publisher;
+import com.pttk03ecommerce.repository.AuthorRepository;
 import com.pttk03ecommerce.repository.BookRepository;
+import com.pttk03ecommerce.repository.CategoryRepository;
+import com.pttk03ecommerce.repository.PublisherRepository;
 import com.pttk03ecommerce.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,9 +18,51 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookRepository bookRepository;
 
+    @Autowired
+    private AuthorRepository authorRepository;
+
+    @Autowired
+    private PublisherRepository publisherRepository;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
     @Override
-    public Book addBook(Book book) {
-        return bookRepository.save(book);
+    public Book addBook(Book book, String authorName, String publisherName, String categoryName) {
+        Book book1 = new Book();
+        book1.setName(book.getName());
+        book1.setPrice(book.getPrice());
+        book1.setSale(book.getSale());
+        book1.setDescribe(book.getDescribe());
+        book1.setStatus(book.getStatus());
+
+        Integer authorId = authorRepository.findAuthorByName(authorName).getID();
+        if (authorId != null) book1.setAuthorId(authorId);
+        else {
+            Author author = new Author();
+            author.setName(authorName);
+            authorRepository.save(author);
+            book1.setAuthorId(author.getID());
+        }
+
+        Integer publisherId = publisherRepository.findByName(publisherName).getID();
+        if (publisherId != null) book1.setPublisherId(publisherId);
+        else {
+            Publisher publisher = new Publisher();
+            publisher.setName(publisherName);
+            publisherRepository.save(publisher);
+            book1.setPublisherId(publisher.getID());
+        }
+
+        Integer categoryId = categoryRepository.findByCategory(categoryName).getID();
+        if (categoryId != null) book1.setCategoryId(categoryId);
+        else {
+            Category category = new Category();
+            category.setCategory(categoryName);
+            categoryRepository.save(category);
+            book1.setCategoryId(category.getID());
+        }
+
+        return bookRepository.save(book1);
     }
 
     @Override

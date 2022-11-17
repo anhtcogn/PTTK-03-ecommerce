@@ -1,28 +1,15 @@
 package com.pttk03ecommerce.model.item;
 
+import lombok.Data;
+
+import javax.persistence.*;
+
+@Data
+@Table
+@Entity
 public class Category {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
     private String category;
-
-    public Category(Integer ID, String category) {
-        this.ID = ID;
-        this.category = category;
-    }
-
-    public Integer getID() {
-        return ID;
-    }
-
-    public void setID(Integer ID) {
-        this.ID = ID;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
 }
