@@ -26,6 +26,7 @@ public class BookServiceImpl implements BookService {
 
     @Autowired
     private CategoryRepository categoryRepository;
+
     @Override
     public Book addBook(Book book, String authorName, String publisherName, String categoryName) {
         Book book1 = new Book();
@@ -61,7 +62,6 @@ public class BookServiceImpl implements BookService {
             categoryRepository.save(category);
             book1.setCategoryId(category.getID());
         }
-
         return bookRepository.save(book1);
     }
 
