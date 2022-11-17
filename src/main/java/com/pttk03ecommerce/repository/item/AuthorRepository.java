@@ -1,4 +1,4 @@
-package com.pttk03ecommerce.repository;
+package com.pttk03ecommerce.repository.item;
 
 import com.pttk03ecommerce.model.item.Author;
 import org.springframework.data.jpa.repository.JpaRepository;

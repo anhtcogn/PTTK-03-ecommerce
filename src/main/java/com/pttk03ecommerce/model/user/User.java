@@ -1,28 +1,31 @@
 package com.pttk03ecommerce.model.user;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
 
+@Entity
+@Data
+@Table(name = "user")
+@NoArgsConstructor
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
+    @Column(name = "date_of_birth")
     private LocalDateTime dateOfBirth;
     private String phone;
     private String email;
     private String gender;
     private String position;
-    private Acount acount;
-    private Address address;
-    private Fullname fullname;
+    @Column(name = "acount_id")
+    private int acountID;
+    @Column(name = "address_id")
+    private int addressID;
+    @Column(name = "fullname_id")
+    private int fullnameID;
 
-    public User(Integer ID, LocalDateTime dateOfBirth, String phone, String email, String gender, String position, Acount acount, Address address, Fullname fullname) {
-        this.ID = ID;
-        this.dateOfBirth = dateOfBirth;
-        this.phone = phone;
-        this.email = email;
-        this.gender = gender;
-        this.position = position;
-        this.acount = acount;
-        this.address = address;
-        this.fullname = fullname;
-    }
 }
