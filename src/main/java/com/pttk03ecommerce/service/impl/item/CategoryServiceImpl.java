@@ -1,7 +1,7 @@
 package com.pttk03ecommerce.service.impl.item;
 
 import com.pttk03ecommerce.model.item.Category;
-import com.pttk03ecommerce.repository.CategoryRepository;
+import com.pttk03ecommerce.repository.item.CategoryRepository;
 import com.pttk03ecommerce.service.item.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.pttk03ecommerce.controller;
+package com.pttk03ecommerce.controller.item;
 
 import com.pttk03ecommerce.model.item.Book;
 import com.pttk03ecommerce.service.item.BookService;
