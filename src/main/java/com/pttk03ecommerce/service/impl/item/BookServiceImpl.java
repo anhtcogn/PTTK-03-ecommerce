@@ -8,7 +8,7 @@ import com.pttk03ecommerce.repository.item.AuthorRepository;
 import com.pttk03ecommerce.repository.item.BookRepository;
 import com.pttk03ecommerce.repository.item.CategoryRepository;
 import com.pttk03ecommerce.repository.item.PublisherRepository;
-import com.pttk03ecommerce.service.BookService;
+import com.pttk03ecommerce.service.item.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

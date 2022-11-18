@@ -7,9 +7,9 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "acount")
+@Table(name = "account")
 @NoArgsConstructor
-public class Acount {
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer ID;
