@@ -2,7 +2,7 @@ package com.pttk03ecommerce.service.impl.item;
 
 import com.pttk03ecommerce.model.item.Author;
 import com.pttk03ecommerce.repository.item.AuthorRepository;
-import com.pttk03ecommerce.service.AuthorService;
+import com.pttk03ecommerce.service.item.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
