@@ -1,7 +1,7 @@
 package com.pttk03ecommerce.controller;
 
 import com.pttk03ecommerce.model.item.Book;
-import com.pttk03ecommerce.service.BookService;
+import com.pttk03ecommerce.service.item.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

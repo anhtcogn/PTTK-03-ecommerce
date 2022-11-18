@@ -1,4 +1,4 @@
-package com.pttk03ecommerce.service.impl;
+package com.pttk03ecommerce.service.impl.user;
 
 import com.pttk03ecommerce.model.user.Acount;
 import com.pttk03ecommerce.model.user.Address;
@@ -6,7 +6,7 @@ import com.pttk03ecommerce.model.user.Fullname;
 import com.pttk03ecommerce.model.user.User;
 import com.pttk03ecommerce.repository.user.AcountRepository;
 import com.pttk03ecommerce.repository.user.UserRepository;
-import com.pttk03ecommerce.service.UserService;
+import com.pttk03ecommerce.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
