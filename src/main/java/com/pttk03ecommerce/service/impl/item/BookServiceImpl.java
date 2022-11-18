@@ -12,6 +12,8 @@ import com.pttk03ecommerce.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class BookServiceImpl implements BookService {
 
@@ -28,8 +30,36 @@ public class BookServiceImpl implements BookService {
     private CategoryRepository categoryRepository;
 
     @Override
-    public Book addBook(Book book, String authorName, String publisherName, String categoryName) {
-        Book book1 = new Book();
+    public List<Book> getAll() {
+        return bookRepository.findAll();
+    }
+
+    @Override
+    public List<Book> getAllByAuthorId(Integer id) {
+        return bookRepository.getAllByAuthorId(id);
+    }
+
+    @Override
+    public List<Book> getAllByCategoryId(Integer id) {
+        return bookRepository.getAllByCategoryId(id);
+    }
+
+    @Override
+    public List<Book> getAllByPublisherId(Integer id) {
+        return bookRepository.getAllByPublisherId(id);
+    }
+
+    @Override
+    public Book updateBook(Book book, String authorName, String publisherName, String categoryName) {
+        Book book1;
+        if (book.getId() != null) {
+            book1 = bookRepository.getBookById(book.getId());
+            book1.setId(book.getId());
+        }
+        else {
+            book1 = new Book();
+        }
+
         book1.setName(book.getName());
         book1.setPrice(book.getPrice());
         book1.setSale(book.getSale());
@@ -54,20 +84,15 @@ public class BookServiceImpl implements BookService {
             book1.setPublisherId(publisher.getID());
         }
 
-        Integer categoryId = categoryRepository.findByCategory(categoryName).getID();
+        Integer categoryId = categoryRepository.findByName(categoryName).getID();
         if (categoryId != null) book1.setCategoryId(categoryId);
         else {
             Category category = new Category();
-            category.setCategory(categoryName);
+            category.setName(categoryName);
             categoryRepository.save(category);
             book1.setCategoryId(category.getID());
         }
         return bookRepository.save(book1);
-    }
-
-    @Override
-    public Book updateBook(Book book) {
-        return bookRepository.save(book);
     }
 
     @Override
