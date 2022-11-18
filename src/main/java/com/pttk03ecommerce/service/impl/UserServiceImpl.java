@@ -35,6 +35,6 @@ public class UserServiceImpl implements UserService {
             acount.setUsername(acountUsername);
             acountRepository.save(acount);
         }
-        return acountRepository.save(user1);
+        return user1;
     }
 }
