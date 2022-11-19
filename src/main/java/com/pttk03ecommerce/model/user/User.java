@@ -21,8 +21,8 @@ public class User {
     private String email;
     private String gender;
     private String position;
-    @Column(name = "acount_id")
-    private Integer acountID;
+    @Column(name = "account_id")
+    private Integer accountID;
     @Column(name = "address_id")
     private Integer addressID;
     @Column(name = "fullname_id")

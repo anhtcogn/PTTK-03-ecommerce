@@ -1,5 +1,6 @@
 package com.pttk03ecommerce.model.order;
 
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -7,14 +8,14 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "cart")
+@Table(name = "cart_book")
 @NoArgsConstructor
-public class Shipment {
+public class CartBook {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ID;
-    private String status;
-    private String notes;
-    @Column(name = "order_id")
-    private Integer orderID;
+    private Integer id;
+    @Column(name = "cart_id")
+    private Integer cartID;
+    @Column(name = "book_id")
+    private Integer bookID;
 }
