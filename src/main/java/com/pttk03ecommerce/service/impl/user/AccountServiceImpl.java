@@ -22,4 +22,13 @@ public class AccountServiceImpl implements AccountService {
         List<Account> accounts = accountRepository.findAllById(accountID);
         return accounts;
     }
+
+    @Override
+    public Account updateAccount(Account account) {
+        Account account1 = accountRepository.getAccountById(account.getID());
+        account1.setUsername(account.getUsername());
+        account1.setPassword(account.getPassword());
+        account1.setStatus(account.getStatus());
+        return accountRepository.save(account1);
+    }
 }

@@ -7,4 +7,5 @@ import java.util.List;
 public interface AccountService {
     Account addAccount(Account account);
     List<Account> getAccount(Integer accountID);
+    Account updateAccount(Account account);
 }
