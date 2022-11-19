@@ -4,7 +4,9 @@ import com.pttk03ecommerce.model.user.Fullname;
 import com.pttk03ecommerce.repository.user.FullnameRepository;
 import com.pttk03ecommerce.service.user.FullnameService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class FullnameServiceImpl implements FullnameService {
     @Autowired
     FullnameRepository fullnameRepository;

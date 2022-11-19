@@ -4,7 +4,9 @@ import com.pttk03ecommerce.model.user.Address;
 import com.pttk03ecommerce.repository.user.AddressRepository;
 import com.pttk03ecommerce.service.user.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AddressServiceImpl implements AddressService {
 
     @Autowired

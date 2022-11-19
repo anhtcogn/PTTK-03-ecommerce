@@ -4,9 +4,11 @@ import com.pttk03ecommerce.model.user.Account;
 import com.pttk03ecommerce.repository.user.AccountRepository;
 import com.pttk03ecommerce.service.user.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class AccountServiceImpl implements AccountService {
 
     @Autowired
